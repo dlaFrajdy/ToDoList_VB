@@ -4,6 +4,7 @@ Public Class MvcApplication
     Inherits System.Web.HttpApplication
 
     Sub Application_Start()
+        Entity.Database.SetInitializer(New ToDoListVB.Models.ToDoesInitializer())
         AreaRegistration.RegisterAllAreas()
         FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters)
         RouteConfig.RegisterRoutes(RouteTable.Routes)
