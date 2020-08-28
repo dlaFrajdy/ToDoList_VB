@@ -1,15 +1,15 @@
 ﻿@ModelType ToDoListVB.ToDo
 
 @Code
-    ViewData("Title") = "Lista zadań ToDo"
+    ViewData("Title") = "To Do List App"
 End Code
 
-<h2>Index</h2>
+<h2>Your to-do list</h2>
 
 <div id="tableDiv"></div>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="createTask">
+    @Html.ActionLink("Add new task", "Create")
+</div>
 
 
 @section Scripts

@@ -32,9 +32,8 @@
                 @Html.DisplayFor(Function(modelItem) item.Importance)
             </td>
             <td>
-                @Html.ActionLink("Edycja", "Edit", New With {.id = item.ID}) |
-                @Html.ActionLink("Szczegóły", "Details", New With {.id = item.ID}) |
-                @Html.ActionLink("Usuń", "Delete", New With {.id = item.ID})
+                @Html.ActionLink("Edit", "Edit", New With {.id = item.ID}) |
+                @Html.ActionLink("Delete", "Delete", New With {.id = item.ID})
             </td>
         </tr>
     Next

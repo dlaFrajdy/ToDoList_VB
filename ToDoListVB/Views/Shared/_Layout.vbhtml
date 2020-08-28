@@ -31,7 +31,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; ToDo App - @DateTime.Now.DayOfWeek - good day to do something :)</p>
         </footer>
     </div>
 

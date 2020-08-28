@@ -1,0 +1,21 @@
+﻿body {
+}
+
+.createTask a {
+    display: block;
+    width: 140px;
+    margin-left: 5px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.createTask a:hover {
+    color: white;
+    background-color: #444;
+}
+
+

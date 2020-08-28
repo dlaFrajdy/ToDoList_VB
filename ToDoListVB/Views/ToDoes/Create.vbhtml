@@ -1,15 +1,14 @@
 ﻿@ModelType ToDoListVB.ToDo
 @Code
-    ViewData("Title") = "Create"
+    ViewData("Title") = "New task"
 End Code
 
-<h2>Create</h2>
+<h2>Add new task</h2>
 
 @Using (Html.BeginForm())
     @Html.AntiForgeryToken()
 
     @<div class="form-horizontal">
-    <h4>ToDo</h4>
     <hr />
     @Html.ValidationSummary(True, "", New With {.class = "text-danger"})
     <div class="form-group">
@@ -17,16 +16,6 @@ End Code
         <div class="col-md-10">
             @Html.EditorFor(Function(model) model.Description, New With {.htmlAttributes = New With {.class = "form-control"}})
             @Html.ValidationMessageFor(Function(model) model.Description, "", New With {.class = "text-danger"})
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(Function(model) model.IsDone, htmlAttributes:=New With {.class = "control-label col-md-2"})
-        <div class="col-md-10">
-            <div class="checkbox">
-                @Html.EditorFor(Function(model) model.IsDone)
-                @Html.ValidationMessageFor(Function(model) model.IsDone, "", New With {.class = "text-danger"})
-            </div>
         </div>
     </div>
 
@@ -47,7 +36,7 @@ End Code
 End Using
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to list..", "Index")
 </div>
 
 @Section Scripts
