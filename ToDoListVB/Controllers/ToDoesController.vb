@@ -43,7 +43,7 @@ Namespace Controllers
         <HttpPost()>
         <ValidateAntiForgeryToken()>
         Function Create(<Bind(Include:="ID,Description,IsDone,Importance")> ByVal toDo As ToDo) As ActionResult
-
+            toDo.CreationDate = Date.Now
             If ModelState.IsValid Then
                 db.ToDoes.Add(toDo)
                 db.SaveChanges()
@@ -66,7 +66,8 @@ Namespace Controllers
         'more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
-        Function Edit(<Bind(Include:="ID,Description,IsDone,Importance")> ByVal toDo As ToDo) As ActionResult
+        Function Edit(<Bind(Include:="ID,Description,IsDone,Importance,CreationDate")> ByVal toDo As ToDo) As ActionResult
+            toDo.CreationDate = Date.Now
             If ModelState.IsValid Then
                 db.Entry(toDo).State = EntityState.Modified
                 db.SaveChanges()
@@ -130,3 +131,4 @@ Namespace Controllers
         End Sub
     End Class
 End Namespace
+

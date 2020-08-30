@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render(“~/Content/fontawesome”)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -20,9 +21,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a href="https://drive.google.com/file/d/1j_hKu6st9Tj_aFudwhUebVneQC9fXJ3p/view" target="_blank">CV</a></li>
+                    <li><a href="https://github.com/dlaFrajdy" target="_blank">Github</a></li>
                 </ul>
             </div>
         </div>
@@ -30,11 +30,11 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; ToDo App - @DateTime.Now.DayOfWeek - good day to do something :)</p>
-        </footer>
-    </div>
 
+    </div>
+    <footer class="mainFooter">
+        <p>&copy; ToDo App - @DateTime.Now.DayOfWeek - good day to do something :)</p>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required:=False)

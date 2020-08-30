@@ -1,6 +1,43 @@
-﻿body {
+﻿
+/* Shared : _Layout*/
+.mainFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    background-color: #222;
 }
 
+    .mainFooter p {
+        margin: 0;
+        color: #aaa;
+    }
+
+
+/* Todoes : _ToDoTable */
+tr th p {
+    margin: 0;
+}
+
+tr td:nth-child(3){
+    width: 16%;
+}
+
+tr td:nth-of-type(even),
+tr th:nth-of-type(even) {
+    text-align: center;
+}
+
+.btn-warning:hover {
+    text-decoration: none;
+}
+
+.btn-danger:hover {
+    text-decoration: none;
+}
+
+/* ToDoes : index */
 .createTask a {
     display: block;
     width: 140px;
@@ -9,13 +46,28 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: 700;
     border: 1px solid #ccc;
+    color: #444;
     transition: 0.3s;
 }
 
-.createTask a:hover {
-    color: white;
-    background-color: #444;
+    .createTask a:hover {
+        color: white;
+        background-color: #666;
+    }
+
+.mainQuote {
+    margin: 70px auto;
 }
 
+/* ToDoes : Delete*/
+.delete-form dt,
+.delete-form dd {
+    line-height: 30px;
+}
 
+/* ToDoes : Edit */
+.edit-checkbox {
+    margin-left: 24px;
+}

@@ -5,13 +5,12 @@ End Code
 
 <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Are you sure you want to delete this task?</h3>
 <div>
-    <h4>ToDo</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="dl-horizontal delete-form">
         <dt>
-            @Html.DisplayNameFor(Function(model) model.Description)
+            Description:
         </dt>
 
         <dd>
@@ -19,11 +18,27 @@ End Code
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(Function(model) model.IsDone)
+            Is it done?
         </dt>
 
         <dd>
             @Html.DisplayFor(Function(model) model.IsDone)
+        </dd>
+
+        <dt>
+            Creation/Edit date:
+        </dt>
+
+        <dd>
+            @Convert.ToDateTime(Model.CreationDate).ToString("dd/MM/yyyy, HH:mm")
+        </dd>
+
+        <dt>
+            Importance:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(Function(model) model.Importance)
         </dd>
 
     </dl>
@@ -31,8 +46,8 @@ End Code
         @Html.AntiForgeryToken()
 
         @<div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <a href="@Url.Action("Index", "ToDoes")" class="btn btn-info">Back to list</a>
+            <input type="submit" value="Delete" class="btn btn-danger" />
         </div>
     End Using
 </div>

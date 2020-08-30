@@ -29,15 +29,12 @@ End Code
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+            <a href="@Url.Action("Index", "ToDoes")" class="btn btn-info">Back to list</a>
+            <input type="submit" value="Create" class="btn btn-success" />
         </div>
     </div>
 </div>
 End Using
-
-<div>
-    @Html.ActionLink("Back to list..", "Index")
-</div>
 
 @Section Scripts
     @Scripts.Render("~/bundles/jqueryval")
